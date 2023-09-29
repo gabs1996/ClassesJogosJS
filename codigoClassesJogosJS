@@ -1,0 +1,47 @@
+class Heroi {
+  constructor(nome, idade, tipo, ataque) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+    this.ataque = ataque;
+  }
+
+  exibirInfo() {
+    console.log(`Nome: ${this.nome}, Idade: ${this.idade}, Tipo: ${this.tipo}, Ataque: ${this.ataque}`);
+  }
+}
+
+// Criando os objetos
+const heroi1 = new Heroi("Heman", 30, "Guerreiro", "Espada");
+const heroi2 = new Heroi("Harry Potter", 16, "Mago", "Avada Kedavra");
+const heroi3 = new Heroi("Naruto", 13, "Ninja", "Ninjutsu");
+const heroi4 = new Heroi("Zenyatta", 50, "Monge", "Palma de Lotus");
+
+// Acessando as propriedades e métodos
+/*heroi1.exibirInfo();
+heroi2.exibirInfo();
+heroi3.exibirInfo();
+heroi4.exibirInfo();*/
+
+let mensagem1 = `O ${heroi1.tipo} atacou usando ${heroi1.ataque}.`;
+let mensagem2 = `O ${heroi2.tipo} atacou usando ${heroi2.ataque}.`;
+let mensagem3 = `O ${heroi3.tipo} atacou usando ${heroi3.ataque}.`;
+let mensagem4 = `O ${heroi4.tipo} atacou usando ${heroi4.ataque}.`;
+
+
+const numeroAleatorio = Math.floor(Math.random() * 4) + 1;
+
+/*console.log(numeroAleatorio);*/
+
+if (numeroAleatorio == 1) {
+    console.log(mensagem1);
+  }
+else if (numeroAleatorio == 2) {
+    console.log(mensagem2);
+  }
+else if (numeroAleatorio == 3) {
+    console.log(mensagem3);
+  }
+else {
+    console.log(mensagem4);
+  };
